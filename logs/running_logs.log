@@ -1,0 +1,36 @@
+[2024-12-26 14:51:10,128:INFO:main:Welcome to my custom log]
+[2024-12-27 20:01:05,585:INFO:common:Created directory at artifacts]
+[2024-12-27 20:01:05,586:INFO:common:Created directory at artifacts/data_ingestion]
+[2024-12-27 21:34:13,133:INFO:common:Created directory at artifacts]
+[2024-12-27 21:34:13,134:INFO:common:Created directory at artifacts/data_ingestion]
+[2024-12-27 22:16:18,871:INFO:common:Created directory at artifacts]
+[2024-12-27 22:16:18,873:INFO:common:Created directory at artifacts/data_ingestion]
+[2024-12-27 22:27:47,129:INFO:common:Created directory at artifacts]
+[2024-12-27 22:27:47,130:INFO:common:Created directory at artifacts/data_ingestion]
+[2024-12-27 22:27:51,602:INFO:data_ingestion:artifacts/data_ingestion/data.zip download!with following info: 
+Connection: close
+Content-Length: 11952223
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "a1bd6d28bce0c775c345565fc3221695f2d5dd0004a1df979554864e7f56e9be"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1DF3:52498:26763C0:2815240:676EFFA9
+Accept-Ranges: bytes
+Date: Fri, 27 Dec 2024 19:27:49 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs10549-MRS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1735327669.084020,VS0,VE559
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3ad8a3b7fa25090ef0097beb7dff11ae30b40774
+Expires: Fri, 27 Dec 2024 19:32:49 GMT
+Source-Age: 0
+
+]
