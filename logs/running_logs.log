@@ -100,3 +100,336 @@ x==========x]
 [2025-01-05 22:08:07,184:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
 
 x==========x]
+[2025-01-06 11:25:56,045:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:25:56,045:INFO:common:Created directory at artifacts]
+[2025-01-06 11:25:56,045:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:25:56,061:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:25:56,370:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:25:56,386:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:25:56,386:INFO:common:Created directory at artifacts]
+[2025-01-06 11:25:56,386:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:25:57,019:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:25:57,252:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:25:57,395:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:25:57,396:INFO:main:*******************]
+[2025-01-06 11:25:57,396:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:25:57,404:INFO:common:Created directory at artifacts]
+[2025-01-06 11:25:57,406:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:25:57,407:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:25:57,408:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 36, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 11:35:46,706:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:35:46,722:INFO:common:Created directory at artifacts]
+[2025-01-06 11:35:46,722:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:35:46,728:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:35:47,005:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:35:47,006:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:35:47,012:INFO:common:Created directory at artifacts]
+[2025-01-06 11:35:47,012:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:35:47,446:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:35:47,653:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:35:47,799:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:35:47,800:INFO:main:*******************]
+[2025-01-06 11:35:47,800:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:35:47,811:INFO:common:Created directory at artifacts]
+[2025-01-06 11:35:47,812:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:35:47,813:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:35:47,814:ERROR:main:ModelCheckpoint.__init__() got an unexpected keyword argument 'save_format']
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ModelCheckpoint.__init__() got an unexpected keyword argument 'save_format'
+[2025-01-06 11:44:32,345:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:44:32,350:INFO:common:Created directory at artifacts]
+[2025-01-06 11:44:32,350:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:44:32,350:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:44:32,605:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:44:32,620:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:44:32,620:INFO:common:Created directory at artifacts]
+[2025-01-06 11:44:32,620:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:44:33,062:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:44:33,269:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:44:33,415:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:44:33,416:INFO:main:*******************]
+[2025-01-06 11:44:33,416:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:44:33,422:INFO:common:Created directory at artifacts]
+[2025-01-06 11:44:33,423:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:44:33,425:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:44:33,426:ERROR:main:ModelCheckpoint.__init__() got an unexpected keyword argument 'save_format']
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ModelCheckpoint.__init__() got an unexpected keyword argument 'save_format'
+[2025-01-06 11:45:02,628:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:45:02,633:INFO:common:Created directory at artifacts]
+[2025-01-06 11:45:02,634:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:45:02,635:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:45:02,854:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:45:02,854:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:45:02,860:INFO:common:Created directory at artifacts]
+[2025-01-06 11:45:02,861:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:45:03,274:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:45:03,485:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:45:03,646:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:45:03,647:INFO:main:*******************]
+[2025-01-06 11:45:03,647:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:45:03,652:INFO:common:Created directory at artifacts]
+[2025-01-06 11:45:03,653:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:45:03,654:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:45:03,654:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 11:48:16,642:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:48:16,651:INFO:common:Created directory at artifacts]
+[2025-01-06 11:48:16,652:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:48:16,653:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:48:16,920:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:48:16,920:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:48:16,920:INFO:common:Created directory at artifacts]
+[2025-01-06 11:48:16,920:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:48:17,407:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:48:17,632:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:48:17,790:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:48:17,790:INFO:main:*******************]
+[2025-01-06 11:48:17,790:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:48:17,790:INFO:common:Created directory at artifacts]
+[2025-01-06 11:48:17,790:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:48:17,801:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:48:17,802:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 11:54:32,341:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 11:54:32,347:INFO:common:Created directory at artifacts]
+[2025-01-06 11:54:32,348:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 11:54:32,349:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 11:54:32,620:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 11:54:32,620:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 11:54:32,628:INFO:common:Created directory at artifacts]
+[2025-01-06 11:54:32,629:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 11:54:33,121:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:54:33,343:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 11:54:33,501:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 11:54:33,502:INFO:main:*******************]
+[2025-01-06 11:54:33,502:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 11:54:33,508:INFO:common:Created directory at artifacts]
+[2025-01-06 11:54:33,509:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 11:54:33,510:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 11:54:33,510:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 21:27:26,983:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 21:27:27,000:INFO:common:Created directory at artifacts]
+[2025-01-06 21:27:27,001:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 21:27:27,002:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 21:27:27,358:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 21:27:27,358:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 21:27:27,358:INFO:common:Created directory at artifacts]
+[2025-01-06 21:27:27,358:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 21:27:27,988:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 21:27:28,242:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 21:27:28,383:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 21:27:28,383:INFO:main:*******************]
+[2025-01-06 21:27:28,383:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 21:27:28,383:INFO:common:Created directory at artifacts]
+[2025-01-06 21:27:28,383:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 21:27:28,395:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 21:27:28,396:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 21:30:40,182:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 21:30:40,188:INFO:common:Created directory at artifacts]
+[2025-01-06 21:30:40,188:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 21:30:40,189:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 21:30:40,469:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 21:30:40,470:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 21:30:40,477:INFO:common:Created directory at artifacts]
+[2025-01-06 21:30:40,477:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 21:30:40,937:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 21:30:41,155:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-01-06 21:30:41,298:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 21:30:41,298:INFO:main:*******************]
+[2025-01-06 21:30:41,298:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 21:30:41,298:INFO:common:Created directory at artifacts]
+[2025-01-06 21:30:41,298:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 21:30:41,308:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 21:30:41,310:ERROR:main:The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5]
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 37, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2025-01-06 21:31:46,825:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 21:31:46,830:INFO:common:Created directory at artifacts]
+[2025-01-06 21:31:46,830:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 21:31:46,830:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 21:31:47,149:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 21:31:47,149:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 21:31:47,149:INFO:common:Created directory at artifacts]
+[2025-01-06 21:31:47,149:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 21:31:48,581:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 21:31:48,582:INFO:main:*******************]
+[2025-01-06 21:31:48,582:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 21:31:48,589:INFO:common:Created directory at artifacts]
+[2025-01-06 21:31:48,590:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 21:31:48,591:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 21:31:48,592:INFO:common:Created directory at artifacts\training]
+[2025-01-06 21:31:48,974:ERROR:main:[WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images']
+Traceback (most recent call last):
+  File "C:\Users\tone0\Chicken-Disease-classification\main.py", line 44, in <module>
+    model_trainer.main()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\pipeline\stage_03_training.py", line 23, in main
+    training.train_valid_generator()
+  File "C:\Users\tone0\Chicken-Disease-classification\src\cnn_Classifier\components\training.py", line 32, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\legacy\preprocessing\image.py", line 1138, in flow_from_directory
+    return DirectoryIterator(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tone0\anaconda3\envs\chickendisease\Lib\site-packages\keras\src\legacy\preprocessing\image.py", line 453, in __init__
+    for subdir in sorted(os.listdir(directory)):
+                         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images'
+[2025-01-06 21:34:41,834:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-06 21:34:41,842:INFO:common:Created directory at artifacts]
+[2025-01-06 21:34:41,843:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-06 21:34:41,843:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-06 21:34:42,131:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-06 21:34:42,132:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-06 21:34:42,140:INFO:common:Created directory at artifacts]
+[2025-01-06 21:34:42,141:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-06 21:34:43,499:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-06 21:34:43,499:INFO:main:*******************]
+[2025-01-06 21:34:43,499:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-06 21:34:43,499:INFO:common:Created directory at artifacts]
+[2025-01-06 21:34:43,499:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-06 21:34:43,512:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-06 21:34:43,513:INFO:common:Created directory at artifacts\training]
+[2025-01-06 21:42:33,924:INFO:main:>>>>>> stage Training completed <<<<<<
+
+x==========x]
