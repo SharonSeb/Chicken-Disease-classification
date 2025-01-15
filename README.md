@@ -111,7 +111,7 @@ ECR_REPOSITORY_NAME = simple-app
 # AZURE-CICD-Deployment-with-Github-Actions
 # Save pass:
 
-s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
+
 
 # Run from terminal:
 docker build -t chickenapp.azurecr.io/chicken:latest .
