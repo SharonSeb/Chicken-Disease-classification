@@ -662,3 +662,88 @@ x==========x]
 [2025-01-12 18:18:25,754:INFO:main:>>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-01-16 18:10:53,563:INFO:main:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-16 18:10:53,572:INFO:common:Created directory at artifacts]
+[2025-01-16 18:10:53,573:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-16 18:10:56,653:INFO:data_ingestion:artifacts/data_ingestion/data.zip download!with following info: 
+Connection: close
+Content-Length: 11952223
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "a1bd6d28bce0c775c345565fc3221695f2d5dd0004a1df979554864e7f56e9be"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2582:1C3978:136B0A:13FC77:6789217F
+Accept-Ranges: bytes
+Date: Thu, 16 Jan 2025 15:10:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs1050100-MRS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1737040256.758382,VS0,VE539
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 4bf965dd3d350bec3b698c548c5b9dd63f802a91
+Expires: Thu, 16 Jan 2025 15:15:56 GMT
+Source-Age: 0
+
+]
+[2025-01-16 18:10:57,047:INFO:main:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-16 18:10:57,048:INFO:main:>>>>> stage Prepare Base Model started <<<<<]
+[2025-01-16 18:10:57,054:INFO:common:Created directory at artifacts]
+[2025-01-16 18:10:57,055:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-16 18:10:58,576:INFO:main:>>>>> stage Prepare Base Model completed <<<<<
+
+x==========x]
+[2025-01-16 18:10:58,577:INFO:main:*******************]
+[2025-01-16 18:10:58,577:INFO:main:>>>>>> stage Training started <<<<<<]
+[2025-01-16 18:10:58,585:INFO:common:Created directory at artifacts]
+[2025-01-16 18:10:58,586:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-16 18:10:58,588:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-16 18:10:58,589:INFO:common:Created directory at artifacts\training]
+[2025-01-16 18:12:34,495:INFO:main:>>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-01-16 18:12:34,496:INFO:main:*******************]
+[2025-01-16 18:12:34,498:INFO:main:>>>>>> stage Evaluation stage started <<<<<<]
+[2025-01-16 18:12:34,505:INFO:common:Created directory at artifacts]
+[2025-01-16 18:13:03,216:INFO:common:json file saved at: scores.json]
+[2025-01-16 18:13:03,217:INFO:main:>>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-01-16 18:13:54,798:INFO:stage_01_data_ingestion:>>>>> stage Data Ingestion Stage started <<<<<]
+[2025-01-16 18:13:54,810:INFO:common:Created directory at artifacts]
+[2025-01-16 18:13:54,811:INFO:common:Created directory at artifacts/data_ingestion]
+[2025-01-16 18:13:54,812:INFO:data_ingestion:File already exists of size: ~11672 KB]
+[2025-01-16 18:13:55,195:INFO:stage_01_data_ingestion:>>>>> stage Data Ingestion Stage completed <<<<<
+
+x==========x]
+[2025-01-16 18:14:06,106:INFO:stage_02_prepare_base_model:************************]
+[2025-01-16 18:14:06,107:INFO:stage_02_prepare_base_model:>>>>>>>>>>stagePrepare base model started <<<<<<<<<<<<<<<<<<<]
+[2025-01-16 18:14:06,114:INFO:common:Created directory at artifacts]
+[2025-01-16 18:14:06,116:INFO:common:Created directory at artifacts/prepare_base_model]
+[2025-01-16 18:14:07,335:INFO:stage_02_prepare_base_model:>>>>>>>>>>stagePrepare base model completed <<<<<<<
+
+x==============x]
+[2025-01-16 18:14:17,328:INFO:stage_03_training:*******************]
+[2025-01-16 18:14:17,344:INFO:stage_03_training:>>>>>> stage Training started <<<<<<]
+[2025-01-16 18:14:17,353:INFO:common:Created directory at artifacts]
+[2025-01-16 18:14:17,354:INFO:common:Created directory at artifacts\prepare_callbacks\checkpoint_dir]
+[2025-01-16 18:14:17,355:INFO:common:Created directory at artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-01-16 18:14:17,356:INFO:common:Created directory at artifacts\training]
+[2025-01-16 18:16:14,754:INFO:stage_03_training:>>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-01-16 18:16:26,189:INFO:stage_04_evaluation:*******************]
+[2025-01-16 18:16:26,189:INFO:stage_04_evaluation:>>>>>> stage Evaluation stage started <<<<<<]
+[2025-01-16 18:16:26,199:INFO:common:Created directory at artifacts]
+[2025-01-16 18:17:05,152:INFO:common:json file saved at: scores.json]
+[2025-01-16 18:17:05,153:INFO:stage_04_evaluation:>>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
